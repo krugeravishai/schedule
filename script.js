@@ -1,17 +1,14 @@
 // Update Clock
 function updateClock() {
-    const clock = document.getElementById("clock");
+    const clock = document.getElementById('clock');
     const now = new Date();
-    clock.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-  }
-  setInterval(updateClock, 1000);
-  updateClock();
-  
-  const events = [
-    { time: "09:00 AM", event: "Team Meeting" },
-    { time: "12:00 PM", event: "Lunch Break" },
-    { time: "03:00 PM", event: "Project Review" }
-  ];
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    clock.textContent = `${hours}:${minutes}:${seconds}`;
+}
+setInterval(updateClock, 1000);
+
   
   function displaySchedule() {
     const eventList = document.getElementById("eventList");
