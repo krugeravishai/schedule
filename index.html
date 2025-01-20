@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    #clock {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    #schedule {
+      margin-bottom: 20px;
+    }
+    .message {
+      padding: 10px;
+      background: #ffd700;
+      border-radius: 5px;
+      margin-top: 10px;
+      animation: slideIn 1s ease-in-out;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="clock">Loading time...</div>
+  <div id="schedule">
+    <h3>Today's Schedule</h3>
+    <ul id="eventList">
+      <!-- Dynamic Events will be added here -->
+    </ul>
+  </div>
+  <div id="messages">
+    <!-- Dynamic Messages will appear here -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
