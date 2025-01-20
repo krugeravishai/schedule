@@ -35,6 +35,6 @@ setInterval(updateClock, 1000);
   }
   
   // Example message
-  setTimeout(() => showMessage("Hello World!"), 2000);
+  setTimeout(() => showMessage("Hello World!"), 3000);
   setTimeout(() => showMessage("Meeting in 10 minutes!"), 6000);
   
